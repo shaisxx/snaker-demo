@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="GBK" standalone="no"?>
-<process displayName="forkjoin测试流程" instanceUrl="/flow/forkjoin/all" name="forkjoin">
+<process displayName="forkjoin流程" instanceUrl="/flow/forkjoin/all" name="forkjoin">
 <start displayName="start1" layout="44,177,-1,-1" name="start1">
 <transition g="" name="transition1" offset="0,0" to="task1"/>
 </start>
 <end displayName="end1" layout="764,177,-1,-1" name="end1"/>
-<task displayName="任务1" form="task1.jsp" layout="156,175,-1,-1" name="task1" performType="ANY">
+<task assignee="task1.operator" displayName="任务1" form="task1.jsp" layout="156,175,-1,-1" name="task1" performType="ANY">
 <transition g="" name="transition2" offset="0,0" to="fork1"/>
 </task>
 <fork displayName="fork1" layout="289,177,-1,-1" name="fork1">

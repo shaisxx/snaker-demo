@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="GBK" standalone="no"?>
-<process displayName="actorall测试流程" instanceUrl="/flow/actorall/all" name="actorall">
+<process displayName="会签测试" instanceUrl="/flow/actorall/all" name="actorall">
 <start displayName="start1" layout="60,152,-1,-1" name="start1">
 <transition g="" name="transition1" offset="0,0" to="task1"/>
 </start>

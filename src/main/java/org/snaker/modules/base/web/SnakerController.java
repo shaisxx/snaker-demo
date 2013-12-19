@@ -183,10 +183,12 @@ public class SnakerController {
 	public String processEdit(Model model, @PathVariable("id") String id) {
 		Process process = snakerEngine.process().getProcess(id);
 		model.addAttribute("process", process);
-		try {
-			model.addAttribute("content", StringHelper.textXML(new String(process.getDBContent(), "GBK")));
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+		if(process.getDBContent() != null) {
+			try {
+				model.addAttribute("content", StringHelper.textXML(new String(process.getDBContent(), "GBK")));
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
 		}
 		return "snaker/processEdit";
 	}

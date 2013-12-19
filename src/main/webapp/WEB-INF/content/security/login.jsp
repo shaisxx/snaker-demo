@@ -11,6 +11,11 @@
 		<script src="${ctx}/styles/js/jquery-1.8.3.min.js" type="text/javascript"></script>
 		<script src="${ctx}/styles/bootstrap/2.2.2/js/bootstrap.min.js" type="text/javascript"></script>
 	</head>
+	<script type="text/javascript">
+	if(window != top) {
+		top.location.href = location.href;
+	}
+	</script>
 	<body>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
