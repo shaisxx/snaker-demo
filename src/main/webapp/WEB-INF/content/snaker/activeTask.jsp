@@ -22,22 +22,23 @@
 				</td>
 			</tr>
 		</table>
+
 		<table class="table_all" align="center" border="0" cellpadding="0"
 			cellspacing="0" style="margin-top: 0px">
 			<tr>
-				<td align=center width=30% class="td_list_1" nowrap>
+				<td align=center width=15% class="td_list_1" nowrap>
 					流程名称
 				</td>
-				<td align=center width=30% class="td_list_1" nowrap>
+				<td align=center width=20% class="td_list_1" nowrap>
 					流程编号
 				</td>
-				<td align=center width=20% class="td_list_1" nowrap>
+				<td align=center width=15% class="td_list_1" nowrap>
 					流程启动时间
 				</td>
-				<td align=center width=20% class="td_list_1" nowrap>
+				<td align=center width=15% class="td_list_1" nowrap>
 					任务名称
 				</td>
-				<td align=center width=20% class="td_list_1" nowrap>
+				<td align=center width=15% class="td_list_1" nowrap>
 					任务创建时间
 				</td>
 				
@@ -63,7 +64,8 @@
 						${item.taskCreateTime}&nbsp;
 					</td>
 					<td class="td_list_2" align=left nowrap>
-						<a href="${ctx}/${empty item.instanceUrl ? 'snaker/task/exec' : item.instanceUrl}?processId=${item.processId }&taskId=${item.taskId}&orderId=${item.orderId} " class="btnEdit" title="处理">处理</a>
+						<a href="${ctx}/snaker/process/display?orderId=${item.orderId} " class="btnView" title="查看">查看</a>
+						<a href="${ctx}${empty item.instanceUrl ? '/snaker/task/exec' : item.instanceUrl}?processId=${item.processId }&taskId=${item.taskId}&orderId=${item.orderId} " class="btnEdit" title="处理">处理</a>
 					</td>
 				</tr>
 			</c:forEach>

@@ -386,6 +386,28 @@ a.btnStart {
 	margin-right: 3px;
 }
 
+a.btnUndo {
+	background:url(../images/arrow_undo.png) no-repeat; 
+	display:block; 
+	width:22px; 
+	height:20px; 
+	text-indent:-1000px; 
+	overflow:hidden; 
+	float:left; 
+	margin-right: 3px;
+}
+
+a.btnReject {
+	background:url(../images/arrow_turn_left.png) no-repeat; 
+	display:block; 
+	width:22px; 
+	height:20px; 
+	text-indent:-1000px; 
+	overflow:hidden; 
+	float:left; 
+	margin-right: 3px;
+}
+
 #switchpic {
 	width: 6px;
 	cursor:pointer;

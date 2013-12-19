@@ -47,6 +47,7 @@
 			<tr>
 				<td align="left">
 					<input type='button' onclick="addNew('${ctx}/snaker/process/add')" class='button_70px' value='新建'/>
+					<input type='button' onclick="addNew('${ctx}/snaker/process/deploy')" class='button_70px' value='部署'/>
 					<input type='submit' class='button_70px' value='查询'/>
 				</td>
 			</tr>
@@ -74,8 +75,8 @@
 						${process.displayName}&nbsp;
 					</td>
 					<td class="td_list_2" align=left nowrap>
-						<a href="${ctx }/${empty process.instanceUrl ? 'snaker/process/start' : process.instanceUrl}?processId=${process.id }" class="btnStart" title="启动流程">启动流程</a>
-						<a href="${ctx }/snaker/process/edit/${process.id }" class="btnEdit" title="编辑">编辑</a>
+						<a href="${ctx}${empty process.instanceUrl ? '/snaker/process/start' : process.instanceUrl}?processId=${process.id }" class="btnStart" title="启动流程">启动流程</a>
+						<a href="${ctx}/snaker/process/edit/${process.id }" class="btnEdit" title="编辑">编辑</a>
 						<a href="${ctx}/snaker/process/delete/${process.id }" class="btnDel" title="删除" onclick="return confirmDel();">删除</a>
 					</td>
 				</tr>

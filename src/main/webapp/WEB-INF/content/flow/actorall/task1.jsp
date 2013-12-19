@@ -4,7 +4,6 @@
 <html>
 	<body>
 		<form id="inputForm" action="${ctx }/flow/actorall/task1/save" method="post">
-			<input type="hidden" name="id" value="${id }"/>
 			<input type="hidden" name="processId" value="${processId }"/>
 			<input type="hidden" name="orderId" value="${order.id }"/>
 			<input type="hidden" name="taskId" value="${task.id }"/>
@@ -15,8 +14,8 @@
 						<span>任务2处理者列表：</span>
 					</td>
 					<td class="td_table_2" colspan="3">
-						<input type="checkbox" name="actorIds" value="4700" />系统管理员
-						<input type="checkbox" name="actorIds" value="2410" />测试用户
+						<input type="checkbox" name="actorIds" value="admin" />系统管理员
+						<input type="checkbox" name="actorIds" value="test" />测试用户
 					</td>
 				</tr>
 			</table>

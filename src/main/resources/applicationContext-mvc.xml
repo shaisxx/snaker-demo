@@ -14,7 +14,7 @@
     <mvc:annotation-driven/>
     <!-- <context:annotation-config /> -->
     <mvc:default-servlet-handler/>
-    <context:component-scan base-package="org.snaker.framework.security.web,org.snaker.framework.dictionary.web,org.snaker.modules.base.web,org.snaker.modules.flow.*.web" />
+    <context:component-scan base-package="org.snaker.framework.*.web,org.snaker.modules.*.web" />
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 		<property name="prefix" value="/WEB-INF/content/" />
@@ -39,7 +39,7 @@
 		</property>
 	</bean>
 
-	<!-- <bean id="stringHttpMessageConverter"
+	<bean id="stringHttpMessageConverter"
 		class="org.springframework.http.converter.StringHttpMessageConverter" />
 	<bean id="jsonHttpMessageConverter"
 		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
@@ -57,7 +57,7 @@
                 <ref bean="jsonHttpMessageConverter" />
 			</list>
 		</property>
-	</bean> -->
+	</bean>
 	
 	<mvc:view-controller path="/" view-name="redirect:/index"/>
 </beans>

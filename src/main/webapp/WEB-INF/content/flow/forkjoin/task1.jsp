@@ -4,7 +4,6 @@
 <html>
 	<body>
 		<form id="inputForm" action="${ctx }/flow/forkjoin/task1/save" method="post">
-		<input type="hidden" name="id" value="${id }"/>
 		<input type="hidden" name="processId" value="${processId }"/>
 		<input type="hidden" name="orderId" value="${order.id }"/>
 		<input type="hidden" name="taskId" value="${task.id }"/>

@@ -14,6 +14,7 @@
 	<body>
 		<form id="inputForm" action="${ctx }/flow/leave/apply/save" method="post">
 		<input type="hidden" name="processId" value="${processId }"/>
+		<input type="hidden" name="orderId" value="${orderId }"/>
 		<table width="100%" border="0" align="center" cellpadding="0"
 				class="table_all_border" cellspacing="0" style="margin-bottom: 0px;border-bottom: 0px">
 			<tr>
@@ -44,14 +45,8 @@
 					<td class="td_table_1">
 						<span>请假天数：</span>
 					</td>
-					<td class="td_table_2">
+					<td class="td_table_2" colspan="3">
 						<input type="text" class="input_240" id="day" name="day" />天
-					</td>
-					<td class="td_table_1">
-						<span>开始日期：</span>
-					</td>
-					<td class="td_table_2">
-						<input type="text" class="input_240" id="startDate" name="startDate" readOnly onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
 					</td>
 				</tr>
 			</table>

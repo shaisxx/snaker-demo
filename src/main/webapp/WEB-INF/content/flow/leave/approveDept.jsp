@@ -12,7 +12,6 @@
 
 	<body>
 		<form id="inputForm" action="${ctx }/flow/leave/approveDept/save" method="post">
-		<input type="hidden" name="id" id="id" value="${leave.id }"/>
 		<input type="hidden" name="orderId" value="${orderId }"/>
 		<input type="hidden" name="taskId" value="${taskId }"/>
 		<table width="100%" border="0" align="center" cellpadding="0"
@@ -30,8 +29,7 @@
 						<span>请假人名称：</span>
 					</td>
 					<td class="td_table_2" colspan="3">
-						<input type="hidden" name="user.id" value="${leave.user.id }"/>
-						<input type="text" class="input_240" value="${leave.user.fullname }" readonly/>
+						<input type="text" class="input_240" name="apply.operator" value="${apply_operator }" readonly/>
 					</td>
 				</tr>
 				<tr>
@@ -39,21 +37,15 @@
 						<span>请假理由：</span>
 					</td>
 					<td class="td_table_2" colspan="3">
-						<textarea class="input_textarea_320" id="reason" name="reason" readonly>${leave.reason }</textarea>
+						<textarea class="input_textarea_320" id="reason" name="reason" readonly>${reason }</textarea>
 					</td>
 				</tr>
 				<tr>
 					<td class="td_table_1">
 						<span>请假天数：</span>
 					</td>
-					<td class="td_table_2">
-						<input type="text" class="input_240" id="day" name="day" value="${leave.day }" readonly/>天
-					</td>
-					<td class="td_table_1">
-						<span>开始日期：</span>
-					</td>
-					<td class="td_table_2">
-						<input type="text" class="input_240" id="startDate" name="startDate" value="${leave.startDate }" readonly/>
+					<td class="td_table_2" colspan="3">
+						<input type="text" class="input_240" id="day" name="day" value="${day }" readonly/>天
 					</td>
 				</tr>
 				<tr>
@@ -63,6 +55,7 @@
 					<td class="td_table_2" colspan="3">
 						<input type="radio" name="departmentResult" value="1" checked="checked"/>同意
 						<input type="radio" name="departmentResult" value="-1" />不同意
+						<input type="radio" name="departmentResult" value="-2" />驳回
 					</td>
 				</tr>
 				<tr>
@@ -70,7 +63,7 @@
 						<span>部门经理审批意见：</span>
 					</td>
 					<td class="td_table_2" colspan="3">
-						<textarea class="input_textarea_320" id="departmentDesc" name="departmentDesc"></textarea>
+						<textarea class="input_textarea_320" id="departmentDesc" name="approveDept.suggest">${approveDept_suggest }</textarea>
 					</td>
 				</tr>
 			</table>
